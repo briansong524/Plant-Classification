@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style>
+	* {
+	    box-sizing: border-box;
+	}
+
+	/* Create two equal columns that floats next to each other */
+	.column {
+	    float: left;
+	    width: 33.33%;
+	    padding: 10px;
+	}
+
+	/* Clear floats after the columns */
+	.row:after {
+	    content: "";
+	    display: table;
+	    clear: both;
+	}
+	</style>
+
+
+  <meta charset="UTF-8">
+  <title>Kaggle Plant Image Result</title>
+      <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+      <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+</head>
+		<h1 style = 'margin:0;font-family:Sofia;'>Kaggle Plant Image Results </h1>		
+		<h4 style = 'top-margin:15px'>Click to see another image</h4>
+	
+		
+<form method='GET' action="generate">
+	<p>ImageID: <input type='text' name='imageid' placeholder=0></p>
+	<p><input type='submit' value='Generate'/></p>
+</form>
+
+<!--button type="button" onclick="location.href='generate';">Generate</button-->
+<!--button type="button" onclick="location.href='generate';">Generate</button--> 
+
+<body style="background-color:#ffffff ">
+
+	<h3> Plant Keras Model Result </h3>
+	<p> Image #{{variable.image_num}} </p>
+	<img src={{variable.image_path}} alt="Italian Trulli">
+	<p> Prediction: {{variable.prediction}} </p>
+
+
+
+</div>	
+</body>
+</html>
